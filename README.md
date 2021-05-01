@@ -1,5 +1,5 @@
-# ML2_FinalProject
-Classification of COVID, lung opacity, pneumonia, and normal chest X-ray images
+# Machine Learning 2 - FinalProject
+Classification of COVID, LUNG OPACITY, PNEUMONIA, and NORMAL chest X-ray images using ensamble of RESNET50, XCPTION, and VGG16 pre-trained models
 
 *****COVID-19 CHEST X-RAY DATABASE
 
@@ -44,10 +44,3 @@ Please cite the follwoing two articles if you are using this dataset:
 [7]https://github.com/armiro/COVID-CXNet  
 [8]https://www.kaggle.com/c/rsna-pneumonia-detection-challenge/data
 [9] https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia
-
-
-***Formats
-    - All the images are in Portable Network Graphics (PNG) file format and resolution are 299*299 pixels.
-
-****Objective
-    -  Researchers can use this database to produce useful and impactful scholarly work on COVID-19, which can help in tackling this pandemic. 
