@@ -60,14 +60,22 @@ print(' Number of Lung data:', len(os.listdir(lung_data)))
 
 # Oversample Viral and COVID classes
 AUG_DIR = 'FinalProject/COVID-19_Radiography_Dataset/Augs/'
-list = os.listdir(covid_data)
+listc = os.listdir(covid_data)
 for i in range(0,3258,8):
-    img = cv2.imread(covid_data + list[i])
+    img = cv2.imread(covid_data + listc[i])
     cv2.imwrite(covid_data + 'augfh' + str(i) + '.png', cv2.flip(img, 1))
     cv2.imwrite(covid_data + 'augfv' + str(i) + '.png', cv2.flip(img, 0))
     cv2.imwrite(covid_data + 'augrt' + str(i) + '.png', cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE))
     cv2.imwrite(covid_data + 'augrt' + str(i) + '.png', cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE))
 
+listv = os.listdir(viral_data)
+for i in range(len(listv)):
+    img = cv2.imread(viral_data + listv[i])
+    cv2.imwrite(viral_data + 'augfh' + str(i) + '.png', cv2.flip(img, 1))
+    cv2.imwrite(viral_data + 'augfv' + str(i) + '.png', cv2.flip(img, 0))
+    cv2.imwrite(viral_data + 'augrt' + str(i) + '.png', cv2.rotate(img, cv2.ROTATE_90_CLOCKWISE))
+    cv2.imwrite(viral_data + 'augrt' + str(i) + '.png', cv2.rotate(img, cv2.ROTATE_90_COUNTERCLOCKWISE))
+    
 pic = cv2.imread(AUG_DIR + 'augrn0.png')
 plt.imshow(pic)
 plt.show()
