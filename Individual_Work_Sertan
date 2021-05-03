@@ -1,0 +1,12 @@
+
+The project was about classifying chest X-Ray images into 4 categories, Covid, Pneumonia, Lung Opacity and Normal. 
+
+Everything I worked on is in the final report. Both Kristin and I worked on every single part of the project. We both trained, 
+augmented images, ensembled and evaluated the models. In fact, doing things twice this way gave us the opportunity to compare runs. 
+For example, she was training the models on the original data while I was training them on the augmented data or while she was 
+training by freezing the pre-trained layers, I would try the same run without freezing. 
+
+We both wrote the report and shared the slides so we truly worked on every aspect of this project together. 
+Writing individual reports would literally triple the final report.  
+
+This is the second project I’ve worked with her and she is a pleasure to work with, smart, hardworking, and driven. 
