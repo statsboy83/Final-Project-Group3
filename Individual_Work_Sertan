@@ -9,4 +9,33 @@ training by freezing the pre-trained layers, I would try the same run without fr
 We both wrote the report and shared the slides so we truly worked on every aspect of this project together. 
 Writing individual reports would literally triple the final report.  
 
+I wrote almost all the code myself. I referenced to my old projects from previews classes and used smoe code snips after modifying them. Example, 
+---------------------
+(1) data_tr = tf.keras.preprocessing.image_dataset_from_directory(
+    data_folder, labels='inferred',  class_names=None,
+    color_mode='rgb', batch_size=batch, image_size=img_size, seed=random_seed,
+    validation_split=split, subset='training', interpolation='bilinear'
+)
+
+(2) # ModelCheckpoint callback
+model_checkpoint_cb = keras.callbacks.ModelCheckpoint(filepath=abspath_curr + '/Output/modelVGG16.h5', save_best_only=True, save_weights_only=True)
+
+(3) # EarlyStopping callback
+early_stopping_cb = keras.callbacks.EarlyStopping(patience=2, restore_best_weights=True)
+
+(4)v# ReduceLROnPlateau callback
+reduce_lr_on_plateau_cb = keras.callbacks.ReduceLROnPlateau(factor=0.1,
+                                                            patience=1)
+
+(5) 
+#https://github.com/yuxiaohuang/teaching/blob/master/gwu/machine_learning_I/fall_2020/code/utilities/p3_deep_learning/pmlm_utilities_deep.ipynb
+
+def preprocess_pretrain(data, label):
+    data_preprocessed = preprocess_input(data)
+
+    return data_preprocessed, label
+---------------------
+
+We have around 850 lines of code and what we copied cannot be more than a few percent of our overall program.  
+
 This is the second project I’ve worked with her and she is a pleasure to work with, smart, hardworking, and driven. 
