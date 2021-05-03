@@ -2,7 +2,7 @@
 #####################################################################
 # DESCRIPTION: This program is used to allocate a 10% Test data     #
 #              as well as augment and over/under sample minority and#
-#              majority classes in the traning data respectively    #
+#              majority classes in the training data respectively    #
 #####################################################################
 
 
